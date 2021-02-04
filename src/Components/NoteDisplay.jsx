@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Showdown from 'showdown';
 
@@ -9,7 +10,7 @@ const NoteDisplay = ({ title, content }) => {
   const createMarkup = () => ({ __html: contentDisplay });
  
   return (
-    <div>
+    <div className="right-top">
       <h1>{title}</h1>
       <div dangerouslySetInnerHTML={createMarkup()} />
     </div>

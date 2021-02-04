@@ -5,7 +5,7 @@ const Field = ({
   name, value, onChange, className, classNameParent,
 }) => (
   <div className={classNameParent}>
-    <input type="text" value={value} onChange={onChange} id={name} name={name} className={className} />
+    <input type="text" value={value} onChange={onChange} id={name} name={name} className={className} autoComplete="off" />
   </div>
 );
 
