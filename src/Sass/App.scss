@@ -4,6 +4,20 @@ $gray: #4B4B4B;
 
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
+.bg-gray {
+  background-color: $gray;
+}
 
+.mb-5 {
+  margin-bottom: 30px;
+}
+
+.btn {
+  color: white;
+  background-color: $secondary;
+  padding: 10px 50px;
+}

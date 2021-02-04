@@ -2,10 +2,10 @@
 import React from 'react';
 
 const TextArea = ({
-  name, value, onChange,
+  name, value, onChange, className,
 }) => (
   <div>
-    <textarea value={value} onChange={onChange} id={name} name={name} />
+    <textarea value={value} onChange={onChange} id={name} name={name} className={className} />
   </div>
 );
 
