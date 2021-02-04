@@ -15,6 +15,15 @@ const App = () => {
     setNotes(save);
     localStorage.setItem('notes', JSON.stringify(save));
   };
+  
+  const handleDel = (index) => {
+    console.log(index);
+    let storedValues = localStorage.getItem('notes');
+    storedValues = JSON.parse(storedValues);
+    const newNotes = storedValues.filter((note) => storedValues.indexOf(note) !== index);
+    setNotes(newNotes);
+    localStorage.setItem('notes', JSON.stringify(newNotes));
+  };
 
   useEffect(() => {
     let storedValues = localStorage.getItem('notes');
@@ -25,7 +34,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="left">
-        <NotesViewver notes={notes} />
+        <NotesViewver notes={notes} handleDel={handleDel} />
       </div>
       <div className="right">
         <MarkdownInput handleSave={handleSave} />

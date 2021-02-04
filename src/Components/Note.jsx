@@ -1,12 +1,13 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 
 const Note = ({
-  title, content, 
+  title, content, index, handleDel,
 }) => (
-  <div className="note">
+  <div className="note" onDoubleClick={() => handleDel(index)}>
     <h1>{title}</h1>
     <p>{content}</p>
   </div>
