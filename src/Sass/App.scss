@@ -1,9 +1,8 @@
 $bgcolor: #1B1B1B;
-$secondary: #C93A27;
+$secondary: #C71525;
 $gray: #4B4B4B;
 
 .App {
-  text-align: center;
   display: flex;
   justify-content: space-around;
   height: 100vh;
@@ -31,14 +30,21 @@ $gray: #4B4B4B;
   display:flex;
   width:20%;
   justify-content: center;
+  text-align: center;
+  padding: 0 1em;
 }
 
 .left button {
   margin-top: 50px;
 }
 
+.note {
+  word-break: break-all;
+}
+
 .right {
   width: 80%;
+  margin: 0 1em; 
 }
 
 .right-top {
@@ -47,15 +53,16 @@ $gray: #4B4B4B;
 
 input {
   height: 5vh;
-  width: 95%;
+  width: 100%;
   margin-bottom: 20px;
   color: white;
   font-size: 20px;
 }
 
 textarea {
+  resize: none;
   height: 30vh;
-  width: 95%;
+  width: 100%;
   margin-bottom: 20px;
   color: white;
   font-size: 20px;

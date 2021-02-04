@@ -8,7 +8,6 @@ import './Sass/App.scss';
 const App = () => {
   
   const [notes, setNotes] = useState([]);
-  const [currentNote, setCurrentNote] = useState({});
   
   const handleSave = (note) => {
     let save = [];
@@ -29,7 +28,7 @@ const App = () => {
         <NotesViewver notes={notes} />
       </div>
       <div className="right">
-        <MarkdownInput handleSave={handleSave} currentNote={currentNote} />
+        <MarkdownInput handleSave={handleSave} />
       </div>
     </div>
   );

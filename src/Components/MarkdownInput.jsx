@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Field from './Helpers/Field';
 import TextArea from './Helpers/TextArea';
 import NoteDisplay from './NoteDisplay';
