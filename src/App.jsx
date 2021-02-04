@@ -1,10 +1,9 @@
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    // eslint-disable-next-line react/react-in-jsx-scope
+    <div className="App" />
   );
 }
 
