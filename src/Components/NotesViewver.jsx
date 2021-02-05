@@ -6,12 +6,12 @@ import React from 'react';
 import Button from './Helpers/Button';
 import Note from './Note';
 
-const NotesViewver = ({ notes, handleDel }) => (
+const NotesViewver = ({ notes, handleDel, hundleCurrentNote }) => (
   <div>
     <Button content="Ajouter une note" className="btn" />
     {notes && notes.length > 0 && notes.map(({ 
       title, content,
-    }, index) => <Note title={title} content={content} key={index} handleDel={handleDel} index={index} />)}
+    }, index) => <Note title={title} content={content} key={index} handleDel={handleDel} index={index} hundleCurrentNote={hundleCurrentNote} />)}
   </div>
 );
 

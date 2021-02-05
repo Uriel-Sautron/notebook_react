@@ -9,7 +9,6 @@ const NoteDisplay = ({ title, content }) => {
   
   const contentDisplay = converter.makeHtml(content);
   const createMarkup = () => ({ __html: contentDisplay });
- 
   return (
     <div className="right-top">
       <h1>{title}</h1>

@@ -8,6 +8,7 @@ import './Sass/App.scss';
 const App = () => {
   
   const [notes, setNotes] = useState([]);
+  const [currentNote, setCurrentNote] = useState({});
   
   const handleSave = (note) => {
     let save = [];
@@ -17,12 +18,18 @@ const App = () => {
   };
   
   const handleDel = (index) => {
-    console.log(index);
     let storedValues = localStorage.getItem('notes');
     storedValues = JSON.parse(storedValues);
     const newNotes = storedValues.filter((note) => storedValues.indexOf(note) !== index);
     setNotes(newNotes);
     localStorage.setItem('notes', JSON.stringify(newNotes));
+  };
+
+  const hundleCurrentNote = (index) => {
+    let storedValues = localStorage.getItem('notes');
+    storedValues = JSON.parse(storedValues);
+    const newCurrentNote = storedValues.filter((note) => storedValues.indexOf(note) === index);
+    setCurrentNote(newCurrentNote);
   };
 
   useEffect(() => {
@@ -34,10 +41,10 @@ const App = () => {
   return (
     <div className="App">
       <div className="left">
-        <NotesViewver notes={notes} handleDel={handleDel} />
+        <NotesViewver notes={notes} handleDel={handleDel} hundleCurrentNote={hundleCurrentNote} />
       </div>
       <div className="right">
-        <MarkdownInput handleSave={handleSave} />
+        <MarkdownInput handleSave={handleSave} currentNote={currentNote} />
       </div>
     </div>
   );

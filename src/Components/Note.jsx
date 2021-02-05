@@ -5,9 +5,9 @@
 import React from 'react';
 
 const Note = ({
-  title, content, index, handleDel,
+  title, content, index, handleDel, hundleCurrentNote,
 }) => (
-  <div className="note" onDoubleClick={() => handleDel(index)}>
+  <div className="note" onDoubleClick={() => handleDel(index)} onClick={() => hundleCurrentNote(index)}>
     <h1>{title}</h1>
     <p>{content}</p>
   </div>

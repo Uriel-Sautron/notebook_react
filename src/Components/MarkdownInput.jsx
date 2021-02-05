@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Field from './Helpers/Field';
 import TextArea from './Helpers/TextArea';
 import NoteDisplay from './NoteDisplay';
 import Button from './Helpers/Button';
 
-const MarkdownInput = ({ handleSave }) => {
+const MarkdownInput = ({ handleSave, currentNote }) => {
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -13,9 +13,16 @@ const MarkdownInput = ({ handleSave }) => {
   const handleClick = () => {
     const note = { title, content };
     handleSave(note);
-    setContent('');
     setTitle('');
+    setContent('');
   };
+  useEffect(() => {
+    if (currentNote) {
+      console.log('current in Mark', currentNote.title);
+      setTitle(currentNote[0].title);
+      setContent(currentNote[0].content);
+    }
+  }, [currentNote]);
 
   return (
     <>
