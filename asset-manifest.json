@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/notebook_react/static/css/main.fac14752.chunk.css",
+    "main.js": "/notebook_react/static/js/main.aa0f5ade.chunk.js",
+    "main.js.map": "/notebook_react/static/js/main.aa0f5ade.chunk.js.map",
+    "runtime-main.js": "/notebook_react/static/js/runtime-main.7aff7504.js",
+    "runtime-main.js.map": "/notebook_react/static/js/runtime-main.7aff7504.js.map",
+    "static/js/2.ce9162a4.chunk.js": "/notebook_react/static/js/2.ce9162a4.chunk.js",
+    "static/js/2.ce9162a4.chunk.js.map": "/notebook_react/static/js/2.ce9162a4.chunk.js.map",
+    "index.html": "/notebook_react/index.html",
+    "static/css/main.fac14752.chunk.css.map": "/notebook_react/static/css/main.fac14752.chunk.css.map",
+    "static/js/2.ce9162a4.chunk.js.LICENSE.txt": "/notebook_react/static/js/2.ce9162a4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7aff7504.js",
+    "static/js/2.ce9162a4.chunk.js",
+    "static/css/main.fac14752.chunk.css",
+    "static/js/main.aa0f5ade.chunk.js"
+  ]
+}
