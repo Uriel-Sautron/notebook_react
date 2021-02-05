@@ -18,7 +18,6 @@ const MarkdownInput = ({ handleSave, currentNote }) => {
   };
   useEffect(() => {
     if (currentNote) {
-      console.log('current in Mark', currentNote.title);
       setTitle(currentNote[0].title);
       setContent(currentNote[0].content);
     }

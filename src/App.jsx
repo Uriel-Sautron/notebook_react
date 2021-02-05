@@ -8,7 +8,7 @@ import './Sass/App.scss';
 const App = () => {
   
   const [notes, setNotes] = useState([]);
-  const [currentNote, setCurrentNote] = useState({});
+  const [currentNote, setCurrentNote] = useState();
   
   const handleSave = (note) => {
     let save = [];
