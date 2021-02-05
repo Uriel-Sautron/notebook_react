@@ -16,6 +16,7 @@ const MarkdownInput = ({ handleSave, currentNote }) => {
     setTitle('');
     setContent('');
   };
+  
   useEffect(() => {
     if (currentNote) {
       setTitle(currentNote[0].title);

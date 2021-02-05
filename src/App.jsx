@@ -20,9 +20,11 @@ const App = () => {
   const handleDel = (index) => {
     let storedValues = localStorage.getItem('notes');
     storedValues = JSON.parse(storedValues);
-    const newNotes = storedValues.filter((note) => storedValues.indexOf(note) !== index);
-    setNotes(newNotes);
-    localStorage.setItem('notes', JSON.stringify(newNotes));
+    storedValues.splice(index, 1);
+    setNotes(storedValues);
+    const resetValues = [{ title: ' ', content: ' ' }]; 
+    setCurrentNote(resetValues);
+    localStorage.setItem('notes', JSON.stringify(storedValues));
   };
 
   const hundleCurrentNote = (index) => {
